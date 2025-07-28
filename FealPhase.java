@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class FealPhases {
+public class FealPhase {
 
     public static HashMap<Object, Integer> k3Candidates = new HashMap<>();
     public static HashMap<Integer, Integer> functionCache = new HashMap<>();
@@ -108,7 +108,7 @@ public class FealPhases {
     }
 
     public static int memoizedFunction(int val) {
-        return functionCache.computeIfAbsent(val, FealPhases::roundFunction);
+        return functionCache.computeIfAbsent(val, FealPhase::roundFunction);
     }
 
     public static void refinePhase(long block1, long block2, List<Integer> priorMatches) {
